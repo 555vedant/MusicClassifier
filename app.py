@@ -4,7 +4,7 @@ import librosa
 import tensorflow as tf
 import hashlib
 import os
-from skimage.transform import resize
+from skimage.transform import resize    
 
 def add_custom_css():
     st.markdown("""
@@ -204,7 +204,7 @@ def main():
                 st.audio(uploaded_file, format="audio/wav")
 
             with col2:
-                with st.spinner("🎼 Analyzing your track..."):
+                    
                     # Save uploaded file temporarily
                     temp_file_path = save_uploaded_file(uploaded_file)
                     
@@ -275,8 +275,7 @@ def main():
 if __name__ == "__main__":
     # Configure page
     st.set_page_config(
-        page_title="🎶 Music Genre Classifier",
-        page_icon="🔥",
+        page_title="MusicClassifier",
         layout="wide",
         initial_sidebar_state="collapsed"
     )
